@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="sendButtonStyle.css" type="text/css">
+    <link rel="stylesheet" href="selectStyle.css" type="text/css">
+    <link rel="stylesheet" href="generalPageStyle.css" type="text/css">
+</head>
+<body class="bodyFirst">
+<pre class="pre">
+    Najlepsze filmowe rekomendacje <br>
+                                   na wyciągnięcie ręki
+</pre>
+<form th:action="@{/submit}" th:id="resultForm" method="get" th:object="${movie}">
+    <div class="select">
+        <select name="genre" th:field="*{genre}" style="font-size:25px">
+            <option disabled th:value="all">Wybierz z listy...</option>
+            <option th:each="movieGenre : ${movieGenres}" th:text="${movieGenre.name}" th:value="${movieGenre.getName()}"></option>
+        </select>
+    </div><br>
+    <input class="sendButton" type="submit"  value="Dalej" />
+</form>
+</body>
+</html>

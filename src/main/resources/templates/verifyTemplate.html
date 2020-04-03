@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="sendButtonStyle.css" type="text/css">
+    <link rel="stylesheet" href="generalPageStyle.css" type="text/css">
+    <link rel="stylesheet" href="inputStyle.css" type="text/css">
+</head>
+<body class="bodySecond">
+<form th:action="@{/process-subscriber}" th:object="${subscriber}" method="post">
+    <p class="p">Wprowadź adres email, na który otrzymasz propozycję filmu</p>
+    <input class="form__input"  type="text" th:field="*{emailAddress}" placeholder="E-mail" required="" />
+    <p style="color:red; font-weight:bold; font-size:120%" th:errors="*{emailAddress}"></p>
+    <br><br>
+    <button class="sendButton" type="submit" name="action" value="send" style="vertical-align:middle"><span>WYŚLIJ FILM</span></button>
+</form>
+</body>
+</html>

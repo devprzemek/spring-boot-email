@@ -1,0 +1,37 @@
+.bodyFirst {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-color: #333333;
+    color: #fff;
+}
+
+.bodySecond {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333333;
+}
+
+.pre {
+    display: block;
+    font-family: helvetica;
+    white-space: pre;
+    margin: 1em 0;
+    font-size:60px;
+    font-weight: 900;
+    color: #FFFFFF;
+    line-height: 100%;
+}
+
+.p {
+    font-family: helvetica;
+    font-size:30px;
+    font-weight: 900;
+    color: #FFFFFF;
+}
+
